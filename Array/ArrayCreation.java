@@ -22,6 +22,10 @@ public class ArrayCreation {
 			arr[i] = sc.nextInt(); // Read the element from the user and store it in the array
 
 		}
+		System.out.println("My single Dimension Array");
+		for(int i=0;i<arr.length;i++) {
+			System.out.print(arr[i]+" ");
+		}
 
 		// Close the Scanner object to prevent resource leak
 		sc.close();
