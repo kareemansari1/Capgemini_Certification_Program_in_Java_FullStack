@@ -1,0 +1,1 @@
+create table user(userid int,username varchar(20),useremail varchar(30),useraddress varchar(50),usercity varchar(20));
