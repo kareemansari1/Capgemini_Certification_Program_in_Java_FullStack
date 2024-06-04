@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class Insert {
+public class Statement_Insert {
 
 	public static void main(String[] args) throws SQLException, ClassNotFoundException {
 		// Load and register the JDBC driver
