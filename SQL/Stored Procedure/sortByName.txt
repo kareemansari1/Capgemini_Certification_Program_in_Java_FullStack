@@ -1,0 +1,4 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sortByName`()
+BEGIN
+select * from student order by studentname;
+END
