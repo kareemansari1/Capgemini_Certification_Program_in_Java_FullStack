@@ -1,0 +1,24 @@
+/* Styling the gallery container */
+.gallery {
+    display: inline-block; /* Allows multiple galleries to be displayed side by side */
+    margin: 5px; /* Adds margin around each gallery container */
+    width: 200px; /* Sets the width of each gallery container */
+    border: 1px solid hsl(hue, saturation, lightness); /* Adds a border with a specific color */
+}
+
+/* Styling the description inside the gallery */
+.gallery .description {
+    padding: 10px; /* Adds padding inside the description container */
+    text-align: center; /* Centers the text within the description container */
+}
+
+/* Styling the gallery container on hover */
+.gallery:hover {
+    border: 1px solid hsl(hue, saturation, lightness); /* Changes the border color when the gallery is hovered over */
+}
+
+/* Styling the images inside the gallery */
+.gallery .img {
+    width: 100%; /* Makes the image take up the full width of the gallery container */
+    height: 100%; /* Makes the image take up the full height of the gallery container */
+}

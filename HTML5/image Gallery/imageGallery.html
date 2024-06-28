@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <!-- Internal CSS for basic styling of the gallery -->
+    <style>
+        /* Styling the gallery container */
+        .gallery {
+            display: flex;
+            gap: 10px; /* added gap for better spacing between images */
+        }
+        /* Styling each link inside the gallery */
+        .gallery a {
+            margin: 5px; /* added margin to each anchor tag */
+            text-align: center; /* center text below images */
+            text-decoration: none; /* remove underline from links */
+            color: black; /* set text color */
+        }
+        /* Styling each image inside the gallery */
+        .gallery img {
+            display: block;
+            margin: auto; /* center images inside anchor tags */
+            border: 1px solid #ccc; /* added border for better visual separation */
+        }
+        /* Styling the description below each image */
+        .gallery .description {
+            margin-top: 5px; /* space between image and description */
+            font-size: 16px; /* added font size */
+        }
+    </style>
+    <!-- Link to external CSS file for additional styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Container for the image gallery -->
+    <div class="gallery">
+        <!-- Link to the first image with description -->
+        <a target="_blank" href="img1.jpeg">
+            <img src="img1.jpeg" alt="Image 1 not found" width="300">
+            <div class="description">Indian Flag</div>
+        </a>
+        <!-- Link to the second image with description -->
+        <a target="_blank" href="img2.jpeg">
+            <img src="img2.jpeg" alt="Image 2 not found" width="300">
+            <div class="description">Analyst Chart</div>
+        </a>
+        <!-- Link to the third image with description -->
+        <a target="_blank" href="img3.jpeg">
+            <img src="img3.jpeg" alt="Image 3 not found" width="300">
+            <div class="description">Artificial Intelligence</div>
+        </a>
+        <!-- Link to the fourth image with description -->
+        <a target="_blank" href="img4.jpeg">
+            <img src="img4.jpeg" alt="Image 4 not found" width="300">
+            <div class="description">Beauty of Nature</div>
+        </a>
+    </div>
+</body>
+</html>
