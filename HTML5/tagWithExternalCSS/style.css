@@ -1,0 +1,24 @@
+p{
+    height: 20px;
+}
+img{
+    border-style: dashed;
+    border-width: 3px;
+    color: #999;
+    
+}
+h1{
+padding: 3px;
+letter-spacing: 2px;
+border-bottom: solid;
+}
+body{
+  /*  font-size: 12px;
+    font-family:  Arial, Helvetica;
+    background-color: #fff;*/
+    background-image:url(img1.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 100%;
+    background-size: cover;
+}
