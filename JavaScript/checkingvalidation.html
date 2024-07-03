@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>validation</title>
+    <script>
+    function validate() 
+	  {
+      const p = document.getElementById("phone").value;
+      const e = document.getElementById("email").value;
+      const n = document.getElementById("name").value;
+
+
+      const pValid = /^\d{10}$/; // 10 digit phone number
+      const eValid= /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // email address format
+	    if(n===''){
+        document.getElementById("result").innerHTML = "name can't blank";
+      }
+      
+      else if(n.length <3){
+        document.getElementById("result").innerHTML = "name is 3 character long required";
+      }
+	    else if(p===''){
+        document.getElementById("result").innerHTML = "phone number can't blank";
+      }
+      else if (!pValid.test(p)) 
+	    {
+        document.getElementById("result").innerHTML = "Invalid phone number";
+      } 
+      else if (!eValid.test(e)) 
+	    {
+        document.getElementById("result").innerHTML = "Invalid email address";
+      } 
+      else 
+	    {
+        // document.querySelector(".a").value ="";
+        // document.querySelector(".aa").value= "";
+        document.getElementById("result").innerHTML ="  Phone Number Is : "+p+"<br> Mail is : "+e;
+      }
+    }
+    </script>
+    <style>
+      p{
+        color:red;
+      }
+    </style>
+  </head>     
+  <body>
+    <div align="center">
+      <h1>Checking  validation</h1>
+      <form>
+        <p align="center"id="result"></p>
+        <label for="name">Name:</label>
+        <input type="text" id="name" class="a" name="name"><br><br>
+        <label for="phone">Phone number:</label>
+        <input type="text" id="phone" class="a" name="phone"><br><br>
+        <label for="email">Email address:</label>
+        <input type="email" id="email" class="aa" name="email"><br><br>
+        <input type="button" value="SUBMIT" onclick="validate()">
+       
+    </div>
+  </body>
+</html>
