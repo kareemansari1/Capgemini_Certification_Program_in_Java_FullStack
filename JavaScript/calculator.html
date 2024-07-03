@@ -1,0 +1,82 @@
+<html>
+    <head>
+            <script>
+                var v1, v2;
+                function addition()
+                {
+                    alert(typeof(document.getElementById("n1").value));
+                    var v1 = parseInt(document.getElementById("n1").value);
+                    var v2 = parseInt(document.getElementById("n2").value);
+                    
+                    var res = v1 + v2;
+                    document.write("Addition :  " + res + "<br>");
+                    console.log("Addition:",res);
+                }
+                function subtract()
+                {
+                    var v1 = parseInt(document.getElementById("n1").value);
+                    var v2 = parseInt(document.getElementById("n2").value);
+                    var res = v1 - v2;
+                    document.write("Subtraction :  " + res + "<br>");
+                }
+                function multiply()
+                {
+                    var v1 = parseInt(document.getElementById("n1").value);
+                    var v2 = parseInt(document.getElementById("n2").value);
+                    var res = v1 * v2;
+                    document.write("Multiply :  " + res + "<br>");
+                }
+                function modulus()
+                {
+                    var v1 = parseInt(document.getElementById("n1").value);
+                    var v2 = parseInt(document.getElementById("n2").value);
+                    var res = v1 % v2;
+                    document.write("Modulus :  " + res + "<br>");
+                }
+                function division()
+                {
+                    var v1 = parseInt(document.getElementById("n1").value);
+                    var v2 = parseInt(document.getElementById("n2").value);
+                    var res = v1 / v2;
+                    document.write("Division :  " + res + "<br>");
+                }
+            </script>
+    </head>
+    <body>
+        <form>
+            <table>
+                <tr>
+                    <td>
+                        Number1:
+                    </td>
+                    <td>
+                        <input type="text" id="n1" name="n1"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="n2"/>No2:</label> 
+                    </td>
+                    <td>
+                        <input type="text" id="n2" name="n2"/>
+                    </td>
+                </tr>
+                <td>
+                    <input type="submit" value="+" onclick="addition();"/>
+                </td>
+                <td>
+                    <input type="submit" value="SUB" onclick="subtract();"/>
+                </td>
+                <td>
+                    <input type="submit" value="MUL" onclick="multiply();"/>
+                </td>
+                <td>
+                    <input type="submit" value="MODULUS" onclick="modulus();"/>
+                </td>
+                <td>
+                    <input type="submit" value="DIVISION" onclick="division();"/>
+                </td>
+            </table>
+        </form>
+    </body>
+</html>
