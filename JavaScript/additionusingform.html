@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<script>
+function add()
+{
+  var numOne, numTwo, sum;
+  numOne = parseInt(document.getElementById("first").value);
+  numTwo = parseInt(document.getElementById("second").value);
+  sum = numOne + numTwo;
+  //document.writeln("Sum :",sum);
+  document.getElementById("result").value = sum;
+}
+</script>
+</head>
+<body>
+
+<p>Enter the First Number: <input id="first"></p>
+<p>Enter the Second Number: <input id="second"></p>
+ <p>Sum = <input id="result"></p>
+<!-- Sum : <p id="result"></p> -->
+<button onclick="add()">+</button>
+
+
+</body>
+</html>
