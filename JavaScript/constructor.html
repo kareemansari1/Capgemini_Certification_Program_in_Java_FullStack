@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Person(FirstName, LastName, Age) {
+            this.firstName = FirstName || "unknown";
+            this.lastName = LastName || "unknown";
+            this.age = Age || 25;
+            this.getFullName = function () {
+                return this.firstName + " " + this.lastName + " " + this.age;
+            }
+        };
+        var person1 = new Person("James", "Bond", 50);
+        alert(person1.getFullName());
+        var person2 = new Person("Tom", "Paul");
+        alert(person2.getFullName());
+    </script>
+</body>
+
+</html>
