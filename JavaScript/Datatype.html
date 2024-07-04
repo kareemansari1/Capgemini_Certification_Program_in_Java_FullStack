@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DataType Example</title>
+    <script>
+        // Variable declarations and reassignments
+        var a = 90;
+        var name = "Pooja";
+        name = "Sharley";
+        var price = 90.90;
+        var flag = true;
+        let name1 = "Mehta";
+        name1 = "Payal";
+        const msg = "welcome";
+        
+        // Uncommenting the next line will cause an error because 'msg' is a constant
+        // msg = "hello";
+        
+        a = 100;
+        var b = 20;
+
+        // Output values using document.write
+        document.write("a: " + a + "<br>");
+        document.write("name: " + name + "<br>");
+        document.write("price: " + price + "<br>");
+        document.write("flag: " + flag + "<br>");
+        document.write("name1: " + name1 + "<br>");
+        document.write("msg: " + msg + "<br>");
+        document.write("b: " + b + "<br>");
+
+        // Output values using console.log
+        console.log("Name: " + name1);
+        console.log("Message: " + msg);
+
+        // Redefining and redeclaring variables
+        var x = 30;
+        console.log(x); // prints 30
+        x = "Hi"; // redefining or re-assigning (works without any error)
+        console.log(x); // prints "Hi"
+        
+        var y = 10;
+        console.log(y); // prints 10
+        var y = "Hello"; // Redeclaring (works without any error)
+        console.log(y); // prints "Hello"
+
+        // Loop example
+        for (var i = 0; i < 3; i++) {
+            console.log(i);
+        }
+        console.log("**** " + i); // i is accessible here because 'var' is function-scoped
+    </script>
+</head>
+<body>
+    <h1>JavaScript DataType Example</h1>
+    <!-- <button>SUBMIT</button> -->
+</body>
+</html>
