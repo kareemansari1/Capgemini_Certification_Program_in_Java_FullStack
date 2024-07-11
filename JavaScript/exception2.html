@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Defining object
+        let person = {
+            first_name: 'hello',
+            last_name: 'javascript',
+
+            // Method to get full name
+            getFunction: function () {
+                return "full name " + person.first_name + "  " + person.last_name;
+            },
+
+            // Nested object for phone numbers
+            phone_number: {
+                mobile: '12345',
+                landline: '6789'
+            }
+        };
+
+        // Outputting results to console
+        console.log(person.getFunction()); // Output: full name hello  javascript
+        console.log("firstname===>", person.first_name); // Output: firstname===> hello
+        console.log(person.phone_number.landline); // Output: 6789
+    </script>
+</body>
+
+</html>
