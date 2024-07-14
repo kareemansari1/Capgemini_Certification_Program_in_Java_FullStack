@@ -1,0 +1,86 @@
+<html>
+<head>
+<style>
+h1,h3{
+color:black;
+font-size:40px;
+text-align:center;
+}
+table{
+margin-left:650px;
+border:2px solid white;
+background-color:beige;
+}
+td{
+padding:10px;
+border:2px solid white;
+}
+#button
+{
+margin-left:740px;
+}
+</style>
+<script>
+function show()
+{
+var fname=document.getElementById("txtbox1").value;
+var lname=document.getElementById("txtbox2").value;
+var age=document.getElementById("age").value;
+var gender=document.getElementById("gender").value;
+var address=document.getElementById("address").value;
+confirm("You have Entered:"+"\nName:"+fname+""+lname+"\n Age:"+age+"\nAddress:"+
+address+"\nGender:"+gender+"\n\nDo you want to confirm these Details?");
+}
+function changeColor(val)
+{
+if((val.value=="") || (val.value==null))
+{
+val.style.background="pink";
+}
+else
+{
+val.style.background="cyan";
+}
+}
+</script>
+
+
+</head>
+<body>
+<h1>USER REGISTERATION DETAIL</h1>
+<h3>Please fill the following Details and Get Registered!!</h3>
+<br>
+<br>
+<table>
+<tr>
+<td>FirstName:</td>
+<td><input type="text"name="name1"id="txtbox1"onblur="changeColor(this);"/></td>
+</tr>
+<tr>
+<td>LasttName:</td>
+<td><input type="text"name="name2"id="txtbox2"onblur="changeColor(this);"/></td>
+</tr>
+<tr>
+<td>Age:</td>
+<td><input type="text"name="age_box"id="age"onblur="changeColor(this);"/></td>
+</tr>
+<tr>
+<td>Address:</td>
+<td><textarea rows="5"name="address_box"id="address"onblur="changeColor(this);"/>
+</textarea>
+</td>
+</tr>
+<tr>
+<td>Gender:</td>
+<td><select name="Gender" id="gender">
+<option value="Male">Male</option>
+<option value="FeMale">FeMale</option>
+</select>
+
+</td>
+</tr>
+</table>
+<br>
+<input id="button" type="button" value="Register me"onclick="show();"/>
+</body>
+</html>
