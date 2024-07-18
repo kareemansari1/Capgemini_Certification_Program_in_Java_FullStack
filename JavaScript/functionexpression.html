@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Demo: Function expression</h1>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <script>
+        var add = function sum(val1, val2) {
+            return val1 + val2;
+        };
+        function addition(a, b)
+        {
+            return a+b;
+        };
+         document.getElementById("p3").innerHTML = addition(12, 14);//26
+         document.write("addtion :  " + addition(8, 4));//12
+        document.getElementById("p1").innerHTML = add(10, 10);
+       // document.getElementById("p2").innerHTML = sum(10, 320); // not valid
+    </script>
+</body>
+
+</html>
