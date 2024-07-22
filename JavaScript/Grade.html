@@ -1,0 +1,52 @@
+<html>
+<head>
+<script type ="text/javascript">
+var name, gd;
+var total, avg, m1, m2, m3, m4, m5;
+name = prompt("Enter the name");
+m1 = parseInt(prompt("Enter Mark1:  "));
+m2 = parseInt(prompt("Enter Mark2:  "));
+m3 = parseInt(prompt("Enter Mark3:  "));
+m4 = parseInt(prompt("Enter Mark4:  "));
+m5 = parseInt(prompt("Enter Mark5:  "));
+total = parseInt(m1) + parseInt(m2) + parseInt(m3) + parseInt(m4) + parseInt(m5);
+avg = total/5;
+
+document.write("Name :  " + name + "<br>");
+document.write("Mark1 :  " + m1 + "<br>");
+document.write("Mark2 :  " + m2 + "<br>");
+document.write("Mark3 :  " + m3 + "<br>");
+document.write("Mark4 :  " + m4 + "<br>");
+document.write("Mark5 :  " + m5 + "<br>");
+document.write("Average :  " + avg + "<br>");
+
+if(parseInt(avg)>=90)
+{
+	gd = "A+";
+}
+else if(parseInt(avg)>=80)
+{
+	gd = "A";
+}
+else if(parseInt(avg)>=70)
+{
+	gd = "B+";
+}
+else if(parseInt(avg)>=60)
+{
+	gd = "B";
+}
+else if(parseInt(avg)>=50)
+{
+	gd = "Pass";
+}
+else
+{
+	gd = "Fail";
+}
+document.write("Grade  :  " + gd);
+</script>
+</head>
+<body>
+</body>
+</html>
