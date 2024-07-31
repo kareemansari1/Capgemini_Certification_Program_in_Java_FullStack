@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <script>
+        function validate() {
+            // regex pattern for phone number
+            var a = document.getElementById("em").value;
+            var b = document.getElementById("phno").value;
+            //var c=new RegExp("[a-z A-Z 0-9]@gmail.com");
+            var c = new RegExp("[a-z A-Z 0-9]@gmail.com");
+            //var d=new RegExp("/^\d{10}$/");
+            var d = new RegExp("[6-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]");
+            // check if the phone number is valid
+            if (c.test(a) == 0) {
+                alert("please Enter valid Email");
+                return false;
+            }
+            else if (d.test(b) == 0) {
+                alert("please Enter valid Phone number");
+                return false;
+            }
+            else {
+                console.log("Email id :"+a);
+                return true;
+            }
+           // alert(c);
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <form>
+        <h1>Login Form</h1>
+        <br>
+        <br>
+        <br>
+        <label for="em">Email</label>
+        <input type="text" id="em" name=email />
+        <label for="phno">Phone Number</label>
+        <input type="text" id="phno" name=phonenum />
+        <input type="submit" id="submit" name=submit onclick="validate();" />
+
+
+    </form>
+
+</body>
+</html>
