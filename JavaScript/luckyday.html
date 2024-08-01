@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+function findLuckyDay(){
+    
+    var number =parseInt(document.getElementById('number').value);
+    var daysOfWeek =['Monday','Tuesday','Wednesday','Thusday','Friday','Saturday','Sunday'];
+    
+    var luckyDayIndex=(number)%7;
+var luckyDay=daysOfWeek[parseInt(luckyDayIndex)];
+document.getElementById("result").innerHTML=luckyDay;
+}
+</script>
+</head>
+<body>
+    <div id="main">
+        <h1>Click to find your lucky day!</h1>
+        <input type="text" id="number"/>
+        <button id="btn" onclick="findLuckyDay()">Click</button>
+        <p id="result"></p>
+    </div>
+</body>
+
+</html>
