@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find First Odd Number</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var n = prompt("Enter the number of inputs:");
+        var foundOdd = false;
+
+        for (var i = 0; i < n; i++) {
+            var num = prompt("Enter a number:");
+            if (!foundOdd && num % 2 !== 0) {
+                document.write("First odd number is: " + num);
+                foundOdd = true;
+            }
+        }
+
+        if (!foundOdd) {
+            document.write("No odd numbers found.");
+        }
+    </script>
+</body>
+</html>
