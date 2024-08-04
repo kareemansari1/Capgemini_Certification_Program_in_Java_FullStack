@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Demo: JavaScript Array Object</h1>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <script>
+        var stringArray = new Array();
+        stringArray[0] = "one";
+        stringArray[1] = "two";
+        stringArray[2] = "three";
+        stringArray[3] = "four";
+        var numericArray = new Array(3);
+        numericArray[0] = 1;
+        numericArray[1] = 2;
+        numericArray[2] = 3;
+        var mixedArray = new Array(1, "two", 3, "four");
+        document.getElementById("p1").innerHTML = stringArray;
+        document.getElementById("p2").innerHTML = numericArray;
+        document.getElementById("p3").innerHTML = mixedArray;
+        
+        var p1 = { name: "Steve" }; // object literal syntax
+        var p2 = new Object(); // Object() constructor function
+        p2.name = "Steve"; // property
+    
+    </script>
+    
+</body>
+
+</html>
