@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Array Functionalities</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // Create an array
+        var numbers = [1, 2, 3, 4, 5];
+
+        // Display the array
+        document.write("Array: " + numbers + "<br>");
+
+        // Add an element to the end of the array
+        numbers.push(6);
+        document.write("After push(6): " + numbers + "<br>");
+
+        // Remove the last element of the array
+        var lastElement = numbers.pop();
+        document.write("After pop(): " + numbers + "<br>");
+        document.write("Popped element: " + lastElement + "<br>");
+
+        // Add an element to the beginning of the array
+        numbers.unshift(0);
+        document.write("After unshift(0): " + numbers + "<br>");
+
+        // Remove the first element of the array
+        var firstElement = numbers.shift();
+        document.write("After shift(): " + numbers + "<br>");
+        document.write("Shifted element: " + firstElement + "<br>");
+
+        // Get the length of the array
+        var length = numbers.length;
+        document.write("Length of the array: " + length + "<br>");
+    </script>
+</body>
+
+</html>
