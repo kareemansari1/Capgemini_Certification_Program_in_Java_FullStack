@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<script>
+function getOutput()
+{
+  var str1, str2, concat;
+  str1 = document.getElementById("first").value;
+  str2 = document.getElementById("second").value;
+  var ans= document.getElementById("answer");
+  concat = str1+ " "+ str2;
+  
+ ans.innerHTML = 'Hello '+concat;
+}
+</script>
+</head>
+<body>
+
+<p> <input id="first"></p>
+<p><input id="second"></p>
+<p id="answer"></p>
+
+<button onclick="getOutput()">Click</button>
+
+</body>
+</html>
