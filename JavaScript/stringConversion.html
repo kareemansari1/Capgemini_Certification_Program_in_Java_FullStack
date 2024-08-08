@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript String and Number Conversions, Case Changes</title>
+</head>
+
+<body>
+
+    <script>
+        // Converting string to number
+        var strNumber = "123";
+        var num = Number(strNumber); // Using Number() to convert string to number
+        document.write("Original String: " + strNumber + " (type: " + typeof strNumber + ")<br>");
+        document.write("Converted to Number: " + num + " (type: " + typeof num + ")<br><br>"); // Expected output: 123
+
+        var floatStrNumber = "123.45";
+        var floatNum = parseFloat(floatStrNumber); // Using parseFloat() to convert string to floating-point number
+        document.write("Original String: " + floatStrNumber + " (type: " + typeof floatStrNumber + ")<br>");
+        document.write("Converted to Floating-Point Number: " + floatNum + " (type: " + typeof floatNum + ")<br><br>"); // Expected output: 123.45
+
+        var intStrNumber = "123.45";
+        var intNum = parseInt(intStrNumber); // Using parseInt() to convert string to integer
+        document.write("Original String: " + intStrNumber + " (type: " + typeof intStrNumber + ")<br>");
+        document.write("Converted to Integer: " + intNum + " (type: " + typeof intNum + ")<br><br>"); // Expected output: 123
+
+        // Converting number to string
+        var number = 123;
+        var str = number.toString(); // Using toString() to convert number to string
+        document.write("Original Number: " + number + " (type: " + typeof number + ")<br>");
+        document.write("Converted to String: " + str + " (type: " + typeof str + ")<br><br>"); // Expected output: "123"
+
+        var floatNumber = 123.45;
+        var floatStr = floatNumber.toString(); // Using toString() to convert floating-point number to string
+        document.write("Original Floating-Point Number: " + floatNumber + " (type: " + typeof floatNumber + ")<br>");
+        document.write("Converted to String: " + floatStr + " (type: " + typeof floatStr + ")<br><br>"); // Expected output: "123.45"
+
+        // Changing the case of a string
+        var originalString = "Hello World!";
+        var upperCaseString = originalString.toUpperCase(); // Using toUpperCase() to convert string to uppercase
+        document.write("Original String: " + originalString + "<br>");
+        document.write("Uppercase String: " + upperCaseString + "<br><br>"); // Expected output: "HELLO WORLD!"
+
+        var lowerCaseString = originalString.toLowerCase(); // Using toLowerCase() to convert string to lowercase
+        document.write("Original String: " + originalString + "<br>");
+        document.write("Lowercase String: " + lowerCaseString + "<br>"); // Expected output: "hello world!"
+    </script>
+
+</body>
+
+</html>
