@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function table()
+            {
+                var n1 = parseInt(document.getElementById("n1").value);
+                var i;
+                for(i=1; i<=10; i++)
+                {
+                    document.write(n1 +  " x " + i + " = " + (i*n1) + "<br>");
+                    console.log(n1 +  " x " + i + " = " + (i*n1) );
+                }
+            }
+        </script>
+    </head>
+        <body>
+            <form>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="n1">Number1:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="n1"/>
+                            </td>
+                    </tr>
+                        <tr>
+                            <td>
+                                <input type="submit" value="Generate Table" onclick="table();">
+                            </td>
+                        </tr>
+                </table>
+            </form>
+        </body>
+</html>
+
+
