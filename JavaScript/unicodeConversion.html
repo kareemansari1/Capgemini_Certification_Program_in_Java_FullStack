@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Unicode Conversion: charCodeAt() and fromCharCode()</title>
+</head>
+<body>
+
+<script>
+    // Define a string variable
+    var str = "Hello World!";
+    
+    // Using charCodeAt to find the Unicode value of the character at a specific index
+    var charIndex = 1; // Index of character 'e'
+    var unicodeValue = str.charCodeAt(charIndex); // Using charCodeAt() to get Unicode value
+    document.write("Original String: " + str + "<br>");
+    document.write("Character at index " + charIndex + ": " + str.charAt(charIndex) + "<br>");
+    document.write("Unicode value of character at index " + charIndex + ": " + unicodeValue + "<br><br>"); // Expected output: 101 for 'e'
+
+    // Using fromCharCode to convert a Unicode value back to a character
+    var unicodeChar = 72; // Unicode value for 'H'
+    var charFromUnicode = String.fromCharCode(unicodeChar); // Using fromCharCode() to convert Unicode value to character
+    document.write("Unicode value: " + unicodeChar + "<br>");
+    document.write("Character from Unicode value: " + charFromUnicode + "<br>"); // Expected output: 'H'
+</script>
+
+</body>
+</html>
