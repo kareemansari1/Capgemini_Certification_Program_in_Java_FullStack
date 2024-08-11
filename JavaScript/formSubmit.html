@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submit Form Using JavaScript</title>
+    <script>
+        // Function to be called when the form is submitted
+        function pass() {
+            alert("Form submitted successfully!");
+        }
+    </script>
+</head>
+<body>
+    <!-- Form with onsubmit event that triggers the pass() function -->
+    <form onsubmit="pass()">
+        Name: <input type="text" name="name"><br>
+        <input type="submit" value="Submit"><br>
+    </form>
+</body>
+</html>
