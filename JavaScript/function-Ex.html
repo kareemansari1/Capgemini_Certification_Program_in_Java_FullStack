@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Demo</title>
+    <script language="javascript" type="text/javascript">
+        // Function without arguments
+        function greet() {
+            document.write("Hello, World!<br>");
+        }
+
+        // Function with arguments
+        function greetUser(userName) {
+            document.write("Hello, " + userName + "!<br>");
+        }
+
+        // Function calling another function
+        function welcome() {
+            var userName = "John";
+            greet(); // Calling function without arguments
+            greetUser(userName); // Calling function with arguments
+        }
+
+        // Calling the welcome function
+        welcome();
+    </script>
+</head>
+<body>
+</body>
+</html>
