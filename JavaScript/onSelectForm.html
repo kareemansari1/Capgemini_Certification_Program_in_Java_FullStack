@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>onselect Demo</title>
+    <script type="text/javascript">
+        // Function to display a message when text is selected
+        function message() {
+            alert("You have selected text!");
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <!-- Name input field with onselect event -->
+        Name: <input type="text" name="t1" onselect="message()">
+        <br>
+        <!-- Age input field -->
+        Age: <input type="text" name="t2">
+    </form>
+</body>
+
+</html>
