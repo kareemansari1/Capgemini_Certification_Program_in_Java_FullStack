@@ -1,0 +1,25 @@
+<!-- HTML structure -->
+<html>
+
+<head>
+    <title>Mouse Event Demo</title>
+    <script>
+        // Function to handle mouseover event
+        function over() {
+            document.frm1.b1.value = "Mouse Over"; // Change button text on mouseover
+        }
+
+        // Function to handle mouseout event
+        function out() {
+            document.frm1.b1.value = "Mouse out"; // Change button text on mouseout
+        }
+    </script>
+</head>
+<body>
+    <!-- Form with button to demonstrate mouse events -->
+    <form name="frm1">
+        <input type="button" name="b1" value="Click" onmouseover="over()" // Call over() function on mouseover
+            onmouseout="out()" // Call out() function on mouseout>
+    </form>
+</body>
+</html>
