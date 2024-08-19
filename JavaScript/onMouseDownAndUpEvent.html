@@ -1,0 +1,25 @@
+<!-- HTML structure -->
+<html>
+
+<head>
+    <title>Mouse Demo</title>
+    <script>
+        // Function to handle mouseup event
+        function up() {
+            document.frm1.b1.value = "Mouse up"; // Change button text on mouseup
+        }
+
+        // Function to handle mousedown event
+        function down() {
+            document.frm1.b1.value = "Mouse down"; // Change button text on mousedown
+        }
+    </script>
+</head>
+<body>
+    Form with button to demonstrate mouse events one click 2 events
+    <form name="frm1">
+        <input type="button" name="b1" value="Click" onmouseup="up()" // Call up() function on mouseup
+            onmousedown="down()" // Call down() function on mousedown>
+    </form>
+</body>
+</html>
