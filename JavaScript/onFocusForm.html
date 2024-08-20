@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>onfocus Demo</title>
+    <script type="text/javascript">
+        // Function to display a message when the input field gains focus
+        function message() {
+            alert("Use capital letters only");
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <!-- Name input field with onfocus event -->
+        Name: <input type="text" name="t1" onfocus="message()">
+        <br>
+        <!-- Age input field -->
+        Age: <input type="text" name="t2">
+    </form>
+</body>
+
+</html>
