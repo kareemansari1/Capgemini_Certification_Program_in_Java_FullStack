@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+</head>
+<body>
+    <script>
+        // Define a Student class
+        function Student(name, age, grade, courses) {
+            // Initialize student properties
+            this.name = name; // Student name
+            this.age = age; // Student age
+            this.grade = grade; // Student grade
+            this.courses = courses; // Array of courses student is enrolled in
+        }
+
+        // Method to display student profile using document.write
+        Student.prototype.displayProfile = function() {
+            document.write("Name: " + this.name + "<br>");
+            document.write("Age: " + this.age + "<br>");
+            document.write("Grade: " + this.grade + "<br>");
+            document.write("Courses: " + this.courses.join(", ") + "<br>");
+        };
+
+        // Taking input for the student properties
+        var studentName = prompt("Enter student name:");
+        var studentAge = prompt("Enter student age:");
+        var studentGrade = prompt("Enter student grade:");
+        var studentCourses = prompt("Enter student courses (comma separated):").split(",");
+
+        // Create a new student object
+        var student = new Student(studentName, studentAge, studentGrade, studentCourses);
+
+        // Display student profile
+        student.displayProfile();
+    </script>
+</body>
+</html>
