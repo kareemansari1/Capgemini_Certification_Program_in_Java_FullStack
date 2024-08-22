@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>Dynamically Change Option List</title>
+    <script type="text/javascript">
+        // Function to dynamically change the options in the dropdown list
+        function DisplayList(value) {
+            with (document.forms['frm1']) {
+                if (value == 1) {
+                    op1[0].text = "WPD";
+                    op1[0].value = 1;
+                    op1[1].text = "PIC";
+                    op1[1].value = 2;
+                    op1[2].text = "Maths";
+                    op1[2].value = 3;
+                } else if (value == 2) {
+                    op1[0].text = "OOP";
+                    op1[0].value = 1;
+                    op1[1].text = "DS";
+                    op1[1].value = 2;
+                    op1[2].text = "DBMS";
+                    op1[2].value = 3;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form name="frm1" method="post">
+        <!-- Dropdown list to display subjects -->
+        <select name="op1" size="3">
+            <option value="1">WPD</option>
+            <option value="2">PIC</option>
+            <option value="3">Maths</option>
+        </select>
+        <br><br>
+        <!-- Radio buttons to choose the year, triggering the DisplayList function -->
+        <input type="radio" name="subjects" value="1" onclick="DisplayList(this.value)" checked>First Year<br>
+        <input type="radio" name="subjects" value="2" onclick="DisplayList(this.value)">Second Year<br><br>
+        <!-- Submit button -->
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
