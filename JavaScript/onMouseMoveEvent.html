@@ -1,0 +1,24 @@
+<!-- HTML structure -->
+<html>
+
+<head>
+    <title>Mouse Event Demo</title>
+    <script>
+        // Function to handle mousemove event
+        function move() {
+            alert("Mouse moved"); // Show alert when mouse is moved over textarea
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Form with textarea to demonstrate mousemove event -->
+    <form name="frm1">
+        <textarea name="tal" rows="10" cols="10" onmousemove="move()" // Call move() function when mouse is moved over
+            textarea>
+        Write here...
+      </textarea>
+    </form>
+</body>
+
+</html>
