@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>One-to-One Relationship</title>
+    <script>
+        // Define a Person object
+        var person = {
+            name: "John Doe",
+            age: 30,
+            // One-to-one relationship with Address
+            address: {
+                street: "123 Main St",
+                city: "New York",
+                zipcode: "10001"
+            }
+        };
+
+        // Function to display person details
+        function displayPersonDetails() {
+            document.write("Name: " + person.name + "<br>");  // Display person's name
+            document.write("Age: " + person.age + "<br>");    // Display person's age
+            document.write("Address: " + person.address.street + ", " + person.address.city + " - " + person.address.zipcode);  // Display person's address
+        }
+    </script>
+</head>
+
+<body onload="displayPersonDetails()"> <!-- Call function on page load -->
+</body>
+
+</html>
