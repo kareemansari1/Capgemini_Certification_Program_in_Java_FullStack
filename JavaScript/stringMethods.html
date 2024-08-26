@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>String Methods in JavaScript</title>
+    <script>
+        var text = "Hello, JavaScript World!";
+        var number = 123;
+
+        // lastIndexOf() - Find the last occurrence of a substring
+        document.write("lastIndexOf('o'): " + text.lastIndexOf('o') + "<br>");  // Output: 20
+
+        // search() - Search for a substring
+        document.write("search('JavaScript'): " + text.search('JavaScript') + "<br>");  // Output: 7
+
+        // match() - Find all occurrences matching a regex
+        document.write("match(/l/g): " + text.match(/l/g) + "<br>");  // Output: l,l,l
+
+        // replace() - Replace a substring with another
+        document.write("replace('World', 'Universe'): " + text.replace('World', 'Universe') + "<br>");  // Output: Hello, JavaScript Universe!
+
+        // substr() - Extract a substring from a start position and length
+        document.write("substr(7, 10): " + text.substr(7, 10) + "<br>");  // Output: JavaScript
+
+        // substring() - Extract a substring between two indices
+        document.write("substring(7, 17): " + text.substring(7, 17) + "<br>");  // Output: JavaScript
+
+        // toLowerCase() - Convert to lowercase
+        document.write("toLowerCase(): " + text.toLowerCase() + "<br>");  // Output: hello, javascript world!
+
+        // toUpperCase() - Convert to uppercase
+        document.write("toUpperCase(): " + text.toUpperCase() + "<br>");  // Output: HELLO, JAVASCRIPT WORLD!
+
+        // toString() - Convert number to string
+        document.write("toString(): " + number.toString() + "<br>");  // Output: 123
+
+        // valueOf() - Get primitive value of a string
+        document.write("valueOf(): " + text.valueOf() + "<br>");  // Output: Hello, JavaScript World!
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
