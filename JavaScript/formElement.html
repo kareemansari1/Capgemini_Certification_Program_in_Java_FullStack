@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Elements Example</title>
+    <script>
+        function submitForm() {
+            var username = document.forms["userForm"]["username"].value;
+            var password = document.forms["userForm"]["password"].value;
+            var gender = document.forms["userForm"]["gender"].value;
+            var agree = document.forms["userForm"]["agree"].checked;
+
+            document.write("Username: " + username + "<br>");
+            document.write("Password: " + password + "<br>");
+            document.write("Gender: " + gender + "<br>");
+            document.write("Agreed to terms: " + (agree ? "Yes" : "No") + "<br>");
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- Form starts here -->
+    <form name="userForm">
+        <!-- Username input -->
+        Username: <input type="text" name="username"><br><br>
+
+        <!-- Password input -->
+        Password: <input type="password" name="password"><br><br>
+
+        <!-- Gender radio buttons -->
+        Gender:
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female<br><br>
+
+        <!-- Checkbox for agreement -->
+        <input type="checkbox" name="agree"> I agree to the terms and conditions<br><br>
+
+        <!-- Submit and reset buttons -->
+        <input type="button" value="Submit" onclick="submitForm()">
+        <input type="reset" value="Reset">
+    </form>
+
+</body>
+
+</html>
