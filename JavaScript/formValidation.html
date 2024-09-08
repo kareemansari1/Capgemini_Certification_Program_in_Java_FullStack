@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <script>
+        function validateForm() {
+            // Get form values
+            var userId = document.getElementById('userID').value;
+            var aadharNo = document.getElementById('aadharNo').value;
+
+            // Regular expression for UserID
+            var userIdPattern = /^[A-Z][A-Z0-9]{9}$/;
+            // Regular expression for Aadhar No.
+            var aadharPattern = /^\d{4} \d{4} \d{4}$/;
+
+            // Validate UserID
+            if (!userIdPattern.test(userId)) {
+                alert('UserID must start with a capital letter and be exactly 10 alphanumeric characters long.');
+                return false;
+            }
+
+            // Validate Aadhar No.
+            if (!aadharPattern.test(aadharNo)) {
+                alert('Aadhar No. must be exactly 12 digits long in the format nnnn nnnn nnnn.');
+                return false;
+            }
+
+            // If all validations pass
+            alert('Form submitted successfully!');
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <h2>User Information Form</h2>
+    <form onsubmit="return validateForm()">
+        <label for="userID">UserID:</label>
+        <input type="text" id="userID" name="userID" maxlength="10" required>
+        <br><br>
+        <label for="aadharNo">Aadhar No.:</label>
+        <input type="text" id="aadharNo" name="aadharNo" maxlength="14" required>
+        <br><br>
+        <input type="submit" value="SUBMIT">
+    </form>
+</body>
+
+</html>
