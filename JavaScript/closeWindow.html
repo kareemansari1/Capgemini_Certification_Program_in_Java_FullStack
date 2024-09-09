@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        var new_win; // Variable to hold reference to the new window
+
+        function openWindow() {
+            new_win = window.open("", "", "width=200,height=100"); // Open new window and store reference
+        }
+
+        function closeWindow() {
+            if (new_win) {
+                new_win.close(); // Close the new window if it is open
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <p>Click to open a new window</p>
+    <input type="button" value="Open New Window" onclick="openWindow()" />
+
+    <p>Click to close the new window</p>
+    <input type="button" value="Close New Window" onclick="closeWindow()" />
+</body>
+
+</html>
