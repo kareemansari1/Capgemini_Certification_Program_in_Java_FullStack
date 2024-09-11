@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handlers Example</title>
+    <style>
+        .hover-bg {
+            background-color: lightblue;
+        }
+    </style>
+    <script>
+        // Handle button click
+        function handleClick() {
+            alert('Button was clicked!');
+        }
+
+        // Handle double click
+        function handleDoubleClick() {
+            alert('Button was double-clicked!');
+        }
+
+        // Handle mouse over
+        function handleMouseOver(event) {
+            event.target.classList.add('hover-bg');
+            console.log('Mouse is over the element');
+        }
+
+        // Handle mouse out
+        function handleMouseOut(event) {
+            event.target.classList.remove('hover-bg');
+            console.log('Mouse is out of the element');
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <h1>Event Handlers Example</h1>
+    <form id="myForm">
+        <label for="textInput">Text Input:</label>
+        <input type="text" id="textInput" name="textInput">
+        <br><br>
+
+        <label for="button">Click Me:</label>
+        <button id="button" onclick="handleClick()" ondblclick="handleDoubleClick()" onmousedown="handleMouseDown()">
+            Click or Double-Click Me!
+        </button>
+        <br><br>
+
+        <div id="hoverElement" onmouseover="handleMouseOver(event)" onmouseout="handleMouseOut(event)"
+            style="padding: 10px; border: 1px solid black; width: 200px; text-align: center;">
+            Hover over this area
+        </div>
+    </form>
+</body>
+
+</html>
