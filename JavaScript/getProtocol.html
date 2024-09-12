@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Protocol Example</title>
+    <script type="text/javascript">
+        function displayFunction() {
+            // Get the protocol of the current URL and display it
+            document.getElementById("para").innerHTML = "The protocol of the webpage is: " + window.location.protocol;
+        }
+    </script>
+</head>
+
+<body>
+    <p>Click the button to get the protocol of the webpage.</p>
+    <input type="button" value="Get the Protocol" onclick="displayFunction()" />
+    <p id="para"></p> <!-- Area where the protocol will be displayed -->
+</body>
+
+</html>
