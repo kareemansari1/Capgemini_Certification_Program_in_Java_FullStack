@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Hostname Example</title>
+    <script type="text/javascript">
+        function displayFunction() {
+            // Get the hostname of the current URL and display it
+            document.getElementById("para").innerHTML = "The host of the webpage is: " + window.location.hostname;
+        }
+    </script>
+</head>
+
+<body>
+    <p>Click the button to get the host of the webpage.</p>
+    <input type="button" value="Get the Host" onclick="displayFunction()" />
+    <p id="para"></p> <!-- Area where the hostname will be displayed -->
+</body>
+
+</html>
