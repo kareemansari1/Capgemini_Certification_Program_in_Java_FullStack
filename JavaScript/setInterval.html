@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Interval Example</title>
+    <script type="text/javascript">
+        function myFunction() {
+            // Set an interval to execute displayFunction every 3 seconds (3000 milliseconds)
+            setInterval(displayFunction, 3000);
+        }
+
+        function displayFunction() {
+            // Append text to the element with id 'para'
+            document.getElementById("para").innerHTML += "<p>Welcome to JavaScript.</p>";
+        }
+    </script>
+</head>
+
+<body>
+    <p>Click the button to start the time interval.</p>
+    <input type="button" value="Set Time Interval" onclick="myFunction()" />
+    <p id="para"></p> <!-- Area where new content will be appended -->
+</body>
+
+</html>
