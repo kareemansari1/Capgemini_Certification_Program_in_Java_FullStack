@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BE CSE Admission Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .form-group button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>BE CSE Admission Form</h1>
+        <form id="admissionForm">
+            <!-- Personal Details -->
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+                <div id="fullNameError" class="error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+                <div id="dobError" class="error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <div id="emailError" class="error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <div id="phoneError" class="error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+                <div id="addressError" class="error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="qualification">Highest Qualification:</label>
+                <select id="qualification" name="qualification" required>
+                    <option value="">Select Qualification</option>
+                    <option value="12th">12th Grade</option>
+                    <option value="diploma">Diploma</option>
+                    <option value="other">Other</option>
+                </select>
+                <div id="qualificationError" class="error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Additional Comments:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Function to validate form fields
+        function validateForm() {
+            let isValid = true;
+
+            // Clear previous error messages
+            document.querySelectorAll('.error').forEach(el => el.textContent = '');
+
+            // Full Name Validation
+            const fullName = document.getElementById('fullName').value;
+            if (!fullName.trim()) {
+                document.getElementById('fullNameError').textContent = 'Full Name is required.';
+                isValid = false;
+            }
+
+            // Date of Birth Validation
+            const dob = document.getElementById('dob').value;
+            if (!dob) {
+                document.getElementById('dobError').textContent = 'Date of Birth is required.';
+                isValid = false;
+            }
+
+            // Email Validation
+            const email = document.getElementById('email').value;
+            if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                document.getElementById('emailError').textContent = 'Valid Email is required.';
+                isValid = false;
+            }
+
+            // Phone Number Validation
+            const phone = document.getElementById('phone').value;
+            if (!phone || !/^\d{10}$/.test(phone)) {
+                document.getElementById('phoneError').textContent = 'Valid Phone Number is required.';
+                isValid = false;
+            }
+
+            // Address Validation
+            const address = document.getElementById('address').value;
+            if (!address.trim()) {
+                document.getElementById('addressError').textContent = 'Address is required.';
+                isValid = false;
+            }
+
+            // Qualification Validation
+            const qualification = document.getElementById('qualification').value;
+            if (!qualification) {
+                document.getElementById('qualificationError').textContent = 'Highest Qualification is required.';
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        // Form submission event handler
+        document.getElementById('admissionForm').addEventListener('submit', function (event) {
+            // Prevent default form submission
+            event.preventDefault();
+
+            // Validate form
+            if (validateForm()) {
+                alert('Form submitted successfully!');
+                // You can handle form submission here (e.g., send data to a server)
+            } else {
+                alert('Please correct the errors in the form.');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
